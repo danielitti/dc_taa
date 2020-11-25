@@ -14,15 +14,18 @@ explore: who_reports {
   view_label: "Situation"
   view_name: "Situation_Reports"
   from:  who_situation_reports
+
+  join: databank_demographics {
+    view_label: "Demographics"
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${Situation_Reports.country_region} = ${databank_demographics.country_region} ;;
+  }
+
 }
 
-#
-# join: dim_local_authority {
-#   view_label: "Local Authorities"
-#   type: left_outer
-#   relationship: many_to_one
-#   sql_on: ${dim_local_authority.id} = ${traffic_data.local_authority_id} ;;
-# }
+
+
 # explore: ct_us_covid_tests {}
 
 # explore: databank_demographics {}

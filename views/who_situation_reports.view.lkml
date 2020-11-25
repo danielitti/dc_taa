@@ -2,8 +2,8 @@ view: who_situation_reports {
   sql_table_name: "PUBLIC"."WHO_SITUATION_REPORTS"
     ;;
 
-  dimension: cases_new {
-    type: number
+  measure: cases_new {
+    type: sum
     sql: ${TABLE}."CASES_NEW" ;;
   }
 
@@ -38,8 +38,8 @@ view: who_situation_reports {
     sql: ${TABLE}."DAYS_SINCE_LAST_REPORTED_CASE" ;;
   }
 
-  dimension: deaths {
-    type: number
+  measure: deaths {
+    type: sum
     sql: ${TABLE}."DEATHS" ;;
   }
 
