@@ -10,8 +10,19 @@ datagroup: dc_project_default_datagroup {
 
 persist_with: dc_project_default_datagroup
 
-explore: who_situation_reports {}
+explore: who_reports {
+  view_label: "Situation"
+  view_name: "Situation_Reports"
+  from:  who_situation_reports
+}
 
+#
+# join: dim_local_authority {
+#   view_label: "Local Authorities"
+#   type: left_outer
+#   relationship: many_to_one
+#   sql_on: ${dim_local_authority.id} = ${traffic_data.local_authority_id} ;;
+# }
 # explore: ct_us_covid_tests {}
 
 # explore: databank_demographics {}
@@ -71,4 +82,3 @@ explore: who_situation_reports {}
 # explore: scs_be_detailed_tests {}
 
 # explore: vh_can_detailed {}
-
