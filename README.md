@@ -3,7 +3,7 @@
 The `isa-cogs-bridge` project contains the Python code needed for loading and transforming data from Base (S3) to COGS Bridge (S3). 
 
 ## Modularity
-Large piece of code has been broken down into small independent parts (functions) based on their functionality. Each function is intended to perform a specific task and has inputs and outputs. These functions have been then grouped into modules (or python files) based on their usability, making in this way code maintainability easier:
+Large blocks of code have been broken down into small independent parts (functions) based on their functionality. Each function is intended to perform a specific task and has inputs and outputs. These functions have been then grouped into modules (or python files) based on their usability, making in this way code maintainability easier:
 * main.py: as suggested by the name, this is the module the execute the main code for loading and transforming the data;
 * helpers.py: contains functions used by the main code, such as the ones to connect to AWS S3, Snowflake or compute waste cost; 
 * data_quality_checks.py.py: contains the functions used to apply the data quality checks. This specific module has been created to centralise them and facilitate adding new ones. Every data quality check is represented by a distinct function so it is easy to locate them in case of need;
