@@ -15,5 +15,5 @@ The code has been written with readability in mind, so that HF can read and main
 * function names: they are self explanatory in order to make easy understanding what each function does; the name contains a verb that indicates the action they are performing (get, read, convert);
 * comments: where relevant, comments have been added to clarify part of the code. Comments are following a specific convention:
   * `#` represents a single line comment; 
-  * `## START` and `## END` encloses a code block. This is used to highlight a specific set of instructions that require attention; 
+  * `## START` and `## END` enclose a code block. This is used to highlight a specific set of instructions that require attention; 
 * docstring: at the beginning of each function definition, few lines of text describes the purpose of the function along with its inputs and outputs. The docstring contenct can be accessed using the `__doc__` method of the object or using the help function. Docstring can also be used in conjucntion with the doctest module to allow the easy generation of tests.
